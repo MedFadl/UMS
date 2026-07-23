@@ -23,7 +23,6 @@ public class Semester {
     private Integer academicYear;
 
     @NotNull
-    @Lob
     @Column(name = "term", nullable = false)
     private String term;
 

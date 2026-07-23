@@ -1,5 +1,6 @@
 package com.medhat.ums.entities;
 
+import com.medhat.ums.models.UserRole;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -30,9 +31,9 @@ public class AppUser {
     private String passwordHash;
 
     @NotNull
-    @Lob
+    @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false)
-    private String role;
+    private UserRole role;
 
     @ColumnDefault("1")
     @Column(name = "is_active")

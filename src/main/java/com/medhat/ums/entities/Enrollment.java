@@ -24,12 +24,11 @@ public class Enrollment {
     private Student student;
 
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false )
     @JoinColumn(name = "offering_id", nullable = false)
     private CourseOffering offering;
 
     @NotNull
-    @Lob
     @Column(name = "status", nullable = false)
     private String status;
 
